@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garra Geradores - Energia e Soluções</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #FFD700;
+            --secondary: #f8f9fa;
+            --accent: #ff9900;
+            --text: #333333;
+            --text-light: #666666;
+            --bg-light: #ffffff;
+            --bg-section: #f8f9fa;
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --glass-border: rgba(255, 255, 255, 0.25);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --pink-bar: #ff4d8d; /* Cor rosa para a barra feminina */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header com Efeito Vidro */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 12px 0;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            width: 180px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Barra Rosa - Gerando Energia pela Potência Feminina */
+        .feminine-bar {
+            background: linear-gradient(135deg, var(--pink-bar), #ff80ab);
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 84px; /* Compensa a altura do header fixo */
+            box-shadow: 0 3px 10px rgba(255, 77, 141, 0.2);
+        }
+
+        .feminine-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .feminine-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feminine-content i {
+            font-size: 18px;
+            animation: pulse-flower 2s infinite alternate;
+        }
+
+        @keyframes pulse-flower {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        /* Menu Desktop */
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .desktop-nav ul li a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .desktop-nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            transition: width 0.3s ease;
+        }
+
+        .desktop-nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        .desktop-nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* BOTÃO CONTATO MAIOR NA VERSÃO DESKTOP */
+        .contact-btn {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 14px 35px; /* Aumentado o padding para maior largura */
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            animation: pulse-gold 2s infinite;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            min-width: 140px; /* Largura mínima aumentada */
+            text-align: center;
+        }
+
+        @keyframes pulse-gold {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+            }
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+            animation: none;
+        }
+
+        /* Menu Hambúrguer (visível apenas no mobile) */
+        .mobile-menu-btn {
+            display: none;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 22px;
+            color: var(--text);
+            cursor: pointer;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 350px;
+            height: 100vh;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-left: 1px solid var(--glass-border);
+            padding: 100px 30px 30px;
+            transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            z-index: 1000;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+        }
+
+        .mobile-nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-nav ul li a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            padding: 15px 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .mobile-nav ul li a:hover {
+            color: var(--accent);
+            background: rgba(255, 215, 0, 0.08);
+            border-color: rgba(255, 215, 0, 0.2);
+        }
+
+        .mobile-nav ul li:last-child a {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            animation: pulse-gold 2s infinite;
+            padding: 14px 25px;
+            font-size: 16px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(3px);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Conteúdo Principal - SLIDE */
+        .hero-slider {
+            height: 85vh;
+            min-height: 600px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 30px 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.2s ease;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        /* Overlay preto suave sobre a imagem */
+        .slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+            width: 90%;
+            max-width: 900px;
+            padding: 0;
+            background: transparent;
+            backdrop-filter: none;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+        }
+
+        .slide-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .slide-content p {
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            line-height: 1.7;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Texto específico dos 15 anos em branco completo */
+        .experience-text {
+            color: white !important;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Animações de entrada */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Seções */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--text), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Missão, Visão e Valores */
+        .mvvm-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+
+        .mvvm-item {
+            flex: 1;
+            min-width: 300px;
+            background: var(--bg-light);
+            border-radius: 22px;
+            padding: 45px 35px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: var(--shadow);
+        }
+
+        .mvvm-item:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .mvvm-item i {
+            font-size: 3.2rem;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mvvm-item h3 {
+            font-size: 1.9rem;
+            margin-bottom: 22px;
+            color: var(--text);
+        }
+
+        .mvvm-item p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Marcas Representadas - COM LINKS */
+        .brands-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 70px;
+            padding: 50px 40px;
+            background: var(--bg-section);
+            border-radius: 25px;
+        }
+
+        .brand-logo {
+            width: 230px;
+            height: 130px;
+            background: white;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            text-decoration: none; /* Remove sublinhado do link */
+            position: relative;
+        }
+
+        .brand-logo:hover {
+            transform: scale(1.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .brand-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            /* Removido o filter para manter as cores originais */
+            transition: transform 0.3s ease;
+        }
+
+        .brand-logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Ícone de link externo */
+        .brand-link-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            opacity: 0;
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .brand-logo:hover .brand-link-icon {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Especificações de Geradores */
+        .generators-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 45px;
+        }
+
+        .generator-item {
+            flex: 1;
+            min-width: 300px;
+            background: var(--bg-light);
+            border-radius: 22px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .generator-item:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .generator-img {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .generator-content {
+            padding: 35px 30px;
+        }
+
+        .generator-content h3 {
+            font-size: 1.9rem;
+            color: var(--text);
+            margin-bottom: 18px;
+        }
+
+        .generator-content > p {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .specs {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease;
+        }
+
+        .specs.expanded {
+            max-height: 650px;
+        }
+
+        .specs ul {
+            list-style: none;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .specs ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+        }
+
+        .specs ul li:last-child {
+            border-bottom: none;
+        }
+
+        .specs ul li strong {
+            color: var(--text);
+            min-width: 150px;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .specs-toggle {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.25);
+            width: 100%;
+        }
+
+        .specs-toggle:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.35);
+        }
+
+        .specs-toggle i {
+            transition: transform 0.4s ease;
+        }
+
+        .specs-toggle.expanded i {
+            transform: rotate(180deg);
+        }
+
+        /* Cobertura RJ - MODIFICADA */
+        .coverage {
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 110px 50px;
+            border-radius: 30px;
+            margin: 50px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .coverage h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.3rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            line-height: 1.2;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .coverage p {
+            font-size: 1.35rem;
+            max-width: 850px;
+            margin: 0 auto 45px;
+            line-height: 1.8;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-section);
+            padding: 90px 0 50px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.6rem;
+            color: var(--text);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 18px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            background: white;
+            border-radius: 50%;
+            color: var(--text);
+            font-size: 1.3rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            transform: translateY(-6px) scale(1.1);
+        }
+
+        .contact-info p {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+            width: 22px;
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 18px 25px;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            color: var(--text);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.15);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1100px) {
+            .slide-content h1 {
+                font-size: 3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            
+            .coverage h2 {
+                font-size: 2.8rem;
+            }
+            
+            .brand-logo {
+                width: 200px;
+                height: 120px;
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            /* Menu hambúrguer visível apenas no mobile */
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            /* Menu desktop oculto no mobile */
+            .desktop-nav {
+                display: none;
+            }
+
+            .hero-slider {
+                height: 75vh;
+                min-height: 550px;
+            }
+
+            .slide-content {
+                width: 95%;
+            }
+
+            .slide-content h1 {
+                font-size: 2.6rem;
+            }
+            
+            .slide-content p {
+                font-size: 1.1rem;
+            }
+
+            .feminine-bar {
+                font-size: 14px;
+                padding: 10px 0;
+            }
+            
+            .feminine-content i {
+                font-size: 16px;
+            }
+
+            .mvvm-container, .generators-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .generator-item {
+                width: 100%;
+            }
+
+            .coverage h2 {
+                font-size: 2.4rem;
+            }
+            
+            .coverage {
+                padding: 80px 30px;
+            }
+            
+            .coverage p {
+                font-size: 1.2rem;
+            }
+            
+            /* Botão contato no mobile menu */
+            .mobile-nav ul li:last-child a {
+                padding: 14px 25px;
+                font-size: 16px;
+            }
+            
+            /* Logos das marcas - mobile */
+            .brands-container {
+                gap: 40px;
+                padding: 40px 30px;
+            }
+            
+            .brand-logo {
+                width: 180px;
+                height: 110px;
+                padding: 20px;
+            }
+            
+            .brand-link-icon {
+                width: 24px;
+                height: 24px;
+                font-size: 10px;
+            }
+        }
+
+        @media (min-width: 901px) {
+            /* Menu hambúrguer oculto no desktop */
+            .mobile-menu-btn {
+                display: none;
+            }
+            
+            /* Botão contato maior no desktop */
+            .contact-btn {
+                padding: 14px 40px; /* Ainda maior no desktop */
+                font-size: 16px;
+                min-width: 150px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .slide-content h1 {
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+            }
+            
+            .slide-content p {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+
+            .feminine-bar {
+                font-size: 13px;
+                padding: 8px 0;
+            }
+            
+            .feminine-content {
+                gap: 8px;
+            }
+            
+            .feminine-content i {
+                font-size: 14px;
+            }
+
+            .mvvm-item, .generator-item {
+                min-width: 100%;
+            }
+
+            .brand-logo {
+                width: 160px;
+                height: 100px;
+                padding: 15px;
+            }
+            
+            .brands-container {
+                gap: 30px;
+                padding: 30px 20px;
+            }
+
+            .coverage h2 {
+                font-size: 2rem;
+            }
+            
+            .coverage p {
+                font-size: 1.1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 50px;
+            }
+            
+            .logo-container {
+                width: 150px;
+                height: 50px;
+            }
+            
+            .mobile-nav ul li:last-child a {
+                padding: 12px 20px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header com Efeito Vidro -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo-container">
+                <!-- Logo da pasta -->
+                <img src="logo.svg" alt="Garra Geradores">
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li>
+                        <a href="#contato" class="contact-btn">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="mobile-nav" id="mobileNav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <!-- Barra Rosa - Gerando Energia pela Potência Feminina -->
+    <div class="feminine-bar">
+        <div class="container">
+            <div class="feminine-content">
+                <i class="fas fa-seedling"></i>
+                <span>Gerando Energia pela Potência Feminina</span>
+                <i class="fas fa-bolt"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide de Imagens -->
+    <section class="hero-slider">
+        <div class="slide active" id="slide1"></div>
+        <div class="slide" id="slide2"></div>
+        <div class="slide" id="slide3"></div>
+        
+        <div class="slide-content">
+            <h1>A Potência que seu Negócio Necessita!</h1>
+            <p class="experience-text">Há mais de 15 anos fornecendo soluções energéticas de alta qualidade para todo o Rio de Janeiro, oferecemos os melhores geradores do mercado, com suporte especializado e atendimento 24 horas, garantindo segurança, eficiência e tranquilidade para nossos clientes em qualquer situação.</p>
+
+            <a href="#servicos" class="btn">Conheça Nossos Geradores</a>
+        </div>
+    </section>
+
+    <!-- Missão, Visão e Valores -->
+    <section id="sobre">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Nossa Essência</h2>
+                <p>Conheça os princípios que norteiam nosso trabalho e nos tornam referência no mercado de geradores</p>
+            </div>
+
+            <div class="mvvm-container">
+                <div class="mvvm-item animate-on-scroll">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Missão</h3>
+                    <p>Fornecer soluções energéticas confiáveis e de alta qualidade, garantindo a continuidade dos negócios de nossos clientes através de equipamentos de ponta e suporte especializado.</p>
+                </div>
+
+                <div class="mvvm-item animate-on-scroll">
+                    <i class="fas fa-eye"></i>
+                    <h3>Visão</h3>
+                    <p>Ser reconhecida como a empresa líder em fornecimento de geradores e soluções energéticas no Rio de Janeiro, superando as expectativas dos clientes através da inovação e excelência.</p>
+                </div>
+
+                <div class="mvvm-item animate-on-scroll">
+                    <i class="fas fa-heart"></i>
+                    <h3>Valores</h3>
+                    <p>Compromisso com a qualidade, transparência nas relações, atendimento personalizado, responsabilidade ambiental e paixão por oferecer a melhor solução para cada cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas Representadas - COM LINKS -->
+    <section>
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Marcas que Representamos</h2>
+                <p>Trabalhamos com as melhores marcas do mercado para garantir qualidade e durabilidade</p>
+            </div>
+
+            <div class="brands-container">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="brand-logo animate-on-scroll">
+                    <span class="brand-link-icon">
+                        <i class="fas fa-external-link-alt"></i>
+                    </span>
+                    <!-- Logo Caterpillar colorida -->
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.LpETKuZB-WAfFX8WyJd23QHaDY?rs=1&pid=ImgDetMain&o=7&rm=3" alt="mwm">
+                </a>
+                
+                <a href="#" target="_blank" rel="noopener noreferrer" class="brand-logo animate-on-scroll">
+                    <span class="brand-link-icon">
+                        <i class="fas fa-external-link-alt"></i>
+                    </span>
+                    <!-- Logo Cummins colorida -->
+                    <img src="https://dcdn.mitiendanube.com/stores/391/892/categories/download-2-5e64528ec40825830515940637035507-240-0.png" alt="toyama">
+                </a>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--text-light);">
+                <p><i class="fas fa-external-link-alt" style="margin-right: 8px;"></i> Clique nos logos para visitar os sites oficiais das marcas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especificações de Geradores -->
+    <section id="servicos">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Nossos Geradores</h2>
+                <p>Conheça nossa linha completa de geradores para todas as necessidades</p>
+            </div>
+
+            <div class="generators-container">
+                <div class="generator-item animate-on-scroll">
+                    <div class="generator-img" style="background-image: url('01.png');"></div>
+                    <div class="generator-content">
+                        <h3>Geradores a Diesel</h3>
+                        <p>Soluções de alta potência para indústrias, hospitais, shoppings e grandes empreendimentos. Geradores silenciados (07 db(A) a 1,5m) com bacia de contenção para segurança ambiental.</p>
+                        
+                        <div class="specs" id="specs1">
+                            <ul>
+                                <li><strong>Potência:</strong> 100 kVA a 2500 kVA</li>
+                                <li><strong>Combustível:</strong> Diesel</li>
+                                <li><strong>Silenciamento:</strong> 07 db(A) a 1,5 metros</li>
+                                <li><strong>Segurança Ambiental:</strong> Bacia de contenção para fluidos</li>
+                                <li><strong>Tanque Externo:</strong> Até 1000 litros</li>
+                                <li><strong>Aplicação:</strong> Uso contínuo</li>
+                                <li><strong>Controle:</strong> Painel digital com monitoramento remoto</li>
+                                <li><strong>Acessórios:</strong> Caixa de distribuição, QTA's, QTM's, cabos 35-240 mm²</li>
+                                <li><strong>Garantia:</strong> 2 anos</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="specs-toggle" data-target="specs1">
+                            <span>Ver Especificações Completas</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="generator-item animate-on-scroll">
+                    <div class="generator-img" style="background-image: url('https://toyama.com.br/wp-content/uploads/2024/04/Gerador_TG10000CXE-XP-DR_201-036DR_600x600_01.jpg');"></div>
+                    <div class="generator-content">
+                        <h3>Geradores Toyama</h3>
+                        <p>Mais de 70 modelos para atender comércio, indústria e residências com a força dos motores Toyama. Soluções versáteis para diferentes necessidades energéticas.</p>
+                        
+                        <div class="specs" id="specs2">
+                            <ul>
+                                <li><strong>Modelos Disponíveis:</strong> Mais de 70 opções</li>
+                                <li><strong>Potência:</strong> 10 kVA a 150 kVA</li>
+                                <li><strong>Combustível:</strong> Diesel ou Gasolina</li>
+                                <li><strong>Aplicação:</strong> Comércio, indústria e residências</li>
+                                <li><strong>Controle:</strong> Painel automático com partida remota</li>
+                                <li><strong>Aplicação:</strong> Uso intermitente</li>
+                                <li><strong>Área de Atuação:</strong> Todo o Rio de Janeiro</li>
+                                <li><strong>Acessórios:</strong> Caixas de distribuição, QTA's, QTM's</li>
+                                <li><strong>Garantia:</strong> 1 ano</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="specs-toggle" data-target="specs2">
+                            <span>Ver Especificações Completas</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cobertura RJ -->
+    <section>
+        <div class="container">
+            <div class="coverage animate-on-scroll">
+                <h2>Cobertura em Todo o Estado do Rio de Janeiro</h2>
+                <p>Atendemos todos os municípios do estado do Rio de Janeiro, levando energia e soluções para sua empresa onde quer que você esteja. Nossa equipe técnica está pronta para atender emergências 24 horas por dia, 7 dias por semana.</p>
+                <a href="#contato" class="btn">Solicitar Orçamento Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column animate-on-scroll">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column animate-on-scroll">
+                    <h3>Contato & Localização</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Avenida Perimetral Pompilio Fuly, nº 115, QD: 05, LT: 07 - Jardim Primavera, Duque de Caxias - RJ</p>
+                        <p><i class="fas fa-phone"></i> (21) 3333-4444 | (21) 5555-6666</p>
+                        <p><i class="fas fa-mobile-alt"></i> (21) 99999-8888 (WhatsApp)</p>
+                        <p><i class="fas fa-envelope"></i> contato@garrageradores.com.br</p>
+                        <p><i class="fas fa-clock"></i> Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h</p>
+                    </div>
+                </div>
+
+                <div class="footer-column animate-on-scroll">
+                    <h3>Receba Nossas Ofertas</h3>
+                    <p style="color: var(--text-light); margin-bottom: 25px; font-size: 1.05rem;">Inscreva-se para receber novidades, promoções exclusivas e dicas sobre geradores.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Digite seu melhor e-mail" required>
+                        <button type="submit" class="btn" style="width: 100%; padding: 18px;">Inscrever-se</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="copyright animate-on-scroll">
+                <p>&copy; 2023 Garra Geradores. Todos os direitos reservados. | A potência que seu Negócio Necessita!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const overlay = document.getElementById('overlay');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            
+            // Altera o ícone do botão
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        overlay.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // Volta para o ícone de barras
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        });
+
+        // Fecha o menu ao clicar em um link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                
+                // Volta para o ícone de barras
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Slide de Imagens
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        // URLs das imagens para desktop
+        const desktopImages = [
+            'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'
+        ];
+
+        // URLs das imagens para mobile
+        const mobileImages = [
+            'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'
+        ];
+
+        // Carrega as imagens apropriadas
+        function loadSlideImages() {
+            const isMobile = window.innerWidth <= 900;
+            const imagesToUse = isMobile ? mobileImages : desktopImages;
+            
+            slides.forEach((slide, index) => {
+                slide.style.backgroundImage = `url('${imagesToUse[index]}')`;
+            });
+        }
+
+        // Inicializa as imagens
+        loadSlideImages();
+
+        // Atualiza as imagens quando a janela for redimensionada
+        window.addEventListener('resize', loadSlideImages);
+
+        // Função para trocar slides
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Inicia o slideshow automático
+        setInterval(nextSlide, 6000);
+
+        // Expansão de especificações
+        document.querySelectorAll('.specs-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetSpecs = document.getElementById(targetId);
+                const isExpanded = targetSpecs.classList.contains('expanded');
+                
+                // Fecha todas as especificações
+                document.querySelectorAll('.specs').forEach(specs => {
+                    specs.classList.remove('expanded');
+                });
+                
+                // Remove a classe expanded de todos os botões
+                document.querySelectorAll('.specs-toggle').forEach(btn => {
+                    btn.classList.remove('expanded');
+                    btn.querySelector('span').textContent = 'Ver Especificações Completas';
+                });
+                
+                // Se não estava expandido, expande
+                if (!isExpanded) {
+                    targetSpecs.classList.add('expanded');
+                    this.classList.add('expanded');
+                    this.querySelector('span').textContent = 'Ocultar Especificações';
+                }
+            });
+        });
+
+        // Animação ao rolar a página
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+        function checkScroll() {
+            const windowHeight = window.innerHeight;
+            const triggerPoint = windowHeight * 0.85;
+
+            animateElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerPoint) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        // Verifica animações ao carregar a página
+        window.addEventListener('load', checkScroll);
+        
+        // Verifica animações ao rolar
+        window.addEventListener('scroll', checkScroll);
+
+        // Formulário de newsletter
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            if (email) {
+                alert(`Obrigado por se inscrever na nossa newsletter! Em breve você receberá nossas melhores ofertas no email: ${email}`);
+                this.reset();
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '8px 0';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.boxShadow = '0 6px 25px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.padding = '12px 0';
+                header.style.backdropFilter = 'blur(15px)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
+            }
+        });
+    </script>
+</body>
+</html>
