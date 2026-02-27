@@ -2,1412 +2,3005 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garra Geradores - Energia e Soluções</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    
+    <!-- TÍTULO E FAVICON -->
+    <title>Garra Geradores · Venda, Locação e Manutenção de Geradores</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="shortcut icon" type="image/png" href="icon.png">
+    
+    <!-- META TAGS SEO PRINCIPAIS -->
+    <meta name="title" content="Garra Geradores · Venda, Locação e Manutenção de Geradores">
+    <meta name="description" content="Especialistas em geradores de energia. Venda, locação e manutenção de geradores com equipe própria e atendimento 24h. ISO 9001, ISO 14001, ISO 45001 e NRs.">
+    <meta name="keywords" content="geradores, venda de geradores, locação de geradores, manutenção de geradores, geradores de energia, gerador diesel, grupo gerador, energia emergencial, ISO 9001, NR-10">
+    <meta name="author" content="Garra Geradores">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Portuguese">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- META TAGS OPEN GRAPH (FACEBOOK, LINKEDIN) -->
+    <meta property="og:title" content="Garra Geradores · Soluções em Geração de Energia">
+    <meta property="og:description" content="Venda, locação e manutenção de geradores com excelência e compromisso. Atendimento 24h em todo Brasil.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.garrageradores.com.br">
+    <meta property="og:image" content="https://www.garrageradores.com.br/og-image.jpg">
+    <meta property="og:site_name" content="Garra Geradores">
+    
+    <!-- META TAGS TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Garra Geradores · Soluções em Geração de Energia">
+    <meta name="twitter:description" content="Venda, locação e manutenção de geradores com excelência e compromisso. Atendimento 24h em todo Brasil.">
+    <meta name="twitter:image" content="https://www.garrageradores.com.br/twitter-image.jpg">
+    
+    <!-- META TAGS GEOGRÁFICAS -->
+    <meta name="geo.region" content="BR">
+    <meta name="geo.placename" content="Brasil">
+    
+    <!-- CANONICAL URL -->
+    <link rel="canonical" href="https://www.garrageradores.com.br">
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        :root {
-            --primary: #FFD700;
-            --secondary: #f8f9fa;
-            --accent: #ff9900;
-            --text: #333333;
-            --text-light: #666666;
-            --bg-light: #ffffff;
-            --bg-section: #f8f9fa;
-            --glass-bg: rgba(255, 255, 255, 0.9);
-            --glass-border: rgba(255, 255, 255, 0.25);
-            --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-            --pink-bar: #ff4d8d; /* Cor rosa para a barra feminina */
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            background: #f5f7fa;
+            color: #1e1e2f;
+            line-height: 1.5;
             overflow-x: hidden;
-            line-height: 1.6;
         }
 
-        /* Header com Efeito Vidro */
+        /* ===== HEADER COM EFEITO VIDRO ===== */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            background: var(--glass-bg);
+            padding: 0.7rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border-bottom: 1px solid var(--glass-border);
-            padding: 12px 0;
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
         }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
+        .header-container {
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .nav-container {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
         }
 
-        .logo-container {
-            width: 180px;
-            height: 60px;
+        /* LOGO */
+        .logo img {
+            display: block;
+            width: 160px;
+            height: auto;
+            transition: opacity 0.2s;
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                width: 140px;
+            }
+        }
+
+        /* ===== BOTÃO HAMBÚRGUER ===== */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px;
+            height: 22px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1100;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 2.5px;
+            background-color: #fff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+            background-color: #ff4444;
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(5px);
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+            background-color: #ff4444;
+        }
+
+        /* ===== MENU ===== */
+        .nav-menu {
             display: flex;
             align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            overflow: hidden;
-            background: transparent;
+            list-style: none;
+            gap: 2.5rem;
         }
 
-        .logo-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
+        .nav-menu li a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            color: #fff;
+            transition: color 0.2s;
+            letter-spacing: 0.3px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
-        /* Barra Rosa - Gerando Energia pela Potência Feminina */
-        .feminine-bar {
-            background: linear-gradient(135deg, var(--pink-bar), #ff80ab);
-            color: white;
-            text-align: center;
-            padding: 12px 0;
+        .nav-menu li a:not(.btn-contato):hover {
+            color: #ffd700;
+        }
+
+        /* BOTÃO CONTATO VERMELHO PULSANTE */
+        .btn-contato {
+            background-color: #ff4444;
+            color: #fff !important;
+            padding: 0.6rem 1.8rem;
+            border-radius: 40px;
             font-weight: 600;
-            font-size: 15px;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-            margin-top: 84px; /* Compensa a altura do header fixo */
-            box-shadow: 0 3px 10px rgba(255, 77, 141, 0.2);
+            box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4);
+            transition: 0.2s;
+            animation: pulseRed 1.8s infinite ease-in-out;
+            display: inline-block;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .feminine-bar::before {
+        .btn-contato:hover {
+            background-color: #ff6666;
+            box-shadow: 0 8px 24px rgba(255, 68, 68, 0.6);
+            animation: none;
+            transform: scale(1.02);
+        }
+
+        @keyframes pulseRed {
+            0% { 
+                box-shadow: 0 4px 16px rgba(255, 68, 68, 0.4); 
+                background-color: #ff4444; 
+            }
+            50% { 
+                box-shadow: 0 14px 28px rgba(255, 68, 68, 0.9); 
+                background-color: #ff6666; 
+                transform: scale(1.02);
+            }
+            100% { 
+                box-shadow: 0 4px 16px rgba(255, 68, 68, 0.4); 
+                background-color: #ff4444; 
+            }
+        }
+
+        /* ===== MOBILE MENU ===== */
+        @media (max-width: 700px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 260px;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.8);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2.5rem;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+                transition: right 0.35s cubic-bezier(0.2, 0.9, 0.3, 1);
+                z-index: 1050;
+                padding: 2rem;
+                border-left: 1px solid rgba(255, 215, 0, 0.2);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu li a {
+                font-size: 1.3rem;
+                color: #fff;
+            }
+
+            .btn-contato {
+                padding: 0.7rem 2rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* ===== CONTEÚDO PRINCIPAL ===== */
+        main {
+            margin-top: 0;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* HERO */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-desktop {
+            background-image: url('01.png');
+        }
+
+        @media (max-width: 700px) {
+            .hero-desktop {
+                background-image: url('02.png');
+            }
+        }
+
+        .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: shine 3s infinite;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .feminine-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            position: relative;
+            background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 70%);
             z-index: 1;
         }
 
-        .feminine-content i {
-            font-size: 18px;
-            animation: pulse-flower 2s infinite alternate;
+        .hero-container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+            padding-top: 120px;
         }
 
-        @keyframes pulse-flower {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.1); }
+        /* ===== FORMULÁRIO ===== */
+        .form-card {
+            width: 100%;
+            max-width: 384px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 24px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,240,0.2);
+            margin-left: 80px;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
         }
 
-        /* Menu Desktop */
-        .desktop-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 35px;
-            align-items: center;
+        .form-card:hover {
+            transform: translateY(-5px);
         }
 
-        .desktop-nav ul li a {
-            color: var(--text);
-            text-decoration: none;
+        .form-card h2 {
+            font-size: 1.6rem;
             font-weight: 600;
-            font-size: 15px;
+            margin-bottom: 1.4rem;
+            color: #1e1e2f;
+            letter-spacing: -0.02em;
+            border-left: 4px solid #f5b81b;
+            padding-left: 0.8rem;
+        }
+
+        .form-card label {
+            font-weight: 500;
+            color: #2d2d42;
+            margin-bottom: 0.2rem;
+            display: block;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 0.4px;
+        }
+
+        .form-card input,
+        .form-card select {
+            width: 100%;
+            padding: 0.7rem 0.8rem;
+            border-radius: 10px;
+            border: 1.5px solid #e2e8f0;
+            font-size: 0.9rem;
+            background: white;
+            margin-bottom: 1.2rem;
+            font-family: inherit;
+            transition: all 0.2s;
+            color: #1e293b;
+        }
+
+        .form-card input:focus,
+        .form-card select:focus {
+            outline: none;
+            border-color: #f5b81b;
+            box-shadow: 0 0 0 3px rgba(245, 184, 27, 0.15);
+        }
+
+        .btn-enviar {
+            width: 100%;
+            background: #f5b81b;
+            color: #1e1e2f;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(245, 184, 27, 0.3);
+            transition: 0.2s;
+            margin-top: 0.6rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-enviar:hover {
+            background: #ffcc33;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 184, 27, 0.4);
+        }
+
+        .form-footer {
+            margin-top: 1rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.75rem;
+            border-top: 1px solid #edf2f7;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .hero-container {
+                display: flex;
+                justify-content: center;
+                padding: 1.5rem;
+                padding-top: 100px;
+            }
+
+            .form-card {
+                margin-left: 0;
+                max-width: 352px;
+                padding: 1.6rem 1.2rem;
+            }
+
+            .form-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-section::before {
+                background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-container {
+                padding-top: 90px;
+            }
+            
+            .form-card {
+                padding: 1.4rem 1rem;
+            }
+        }
+
+        /* ===== BOTÃO WHATSAPP FLUTUANTE VERDE (AUMENTADO) ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .whatsapp-float a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+            transition: all 0.3s ease;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .whatsapp-float a:hover {
+            transform: scale(1.15) translateY(-8px);
+            box-shadow: 0 20px 45px rgba(37, 211, 102, 0.7);
+            border-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .whatsapp-float svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-18px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float a {
+                width: 75px;
+                height: 75px;
+            }
+
+            .whatsapp-float svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        /* ===== SEÇÃO DE SERVIÇOS ===== */
+        .services-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #f5b81b, #ffd700, #f5b81b, transparent);
+        }
+
+        .services-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .services-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1e1e2f;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .services-header h2 span {
+            color: #f5b81b;
+            position: relative;
+        }
+
+        .services-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #f5b81b, #ffd700);
+            border-radius: 2px;
+        }
+
+        .services-header p {
+            color: #64748b;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(245, 184, 27, 0.1);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: linear-gradient(180deg, rgba(245, 184, 27, 0.05), transparent);
+            transition: height 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            border-color: #f5b81b;
+            box-shadow: 0 30px 50px rgba(245, 184, 27, 0.15);
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #f5b81b15, #ffd70015);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            box-shadow: 0 15px 30px rgba(245, 184, 27, 0.2);
             transition: all 0.3s ease;
             position: relative;
-            padding: 8px 0;
+            z-index: 2;
+            border: 2px solid #f5b81b30;
         }
 
-        .desktop-nav ul li a::after {
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(135deg, #f5b81b25, #ffd70025);
+            border-color: #f5b81b;
+            box-shadow: 0 20px 40px rgba(245, 184, 27, 0.3);
+        }
+
+        .service-icon svg {
+            width: 60px;
+            height: 60px;
+            color: #f5b81b;
+            filter: drop-shadow(0 4px 6px rgba(245, 184, 27, 0.3));
+        }
+
+        .service-card h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1e1e2f;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-features {
+            list-style: none;
+            text-align: left;
+            margin: 2rem 0;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-features li {
+            color: #475569;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: #f5b81b;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .service-btn {
+            display: inline-block;
+            background: transparent;
+            color: #f5b81b;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid #f5b81b;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .service-btn:hover {
+            background: #f5b81b;
+            color: #1e1e2f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(245, 184, 27, 0.3);
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .services-header h2 {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .services-header h2 {
+                font-size: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .service-card {
+                padding: 2.5rem 1.5rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ===== MODAL POP-UP ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            background: white;
+            border-radius: 30px;
+            width: 90%;
+            max-width: 500px;
+            padding: 2.5rem;
+            position: relative;
+            transform: translateY(30px);
+            transition: transform 0.4s ease;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid #f5b81b30;
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: #ff4444;
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .modal-header h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e1e2f;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-header p {
+            color: #f5b81b;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modal-body {
+            margin-bottom: 2rem;
+        }
+
+        .modal-body label {
+            font-weight: 500;
+            color: #2d2d42;
+            margin-bottom: 0.2rem;
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .modal-body input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border-radius: 12px;
+            border: 1.5px solid #e2e8f0;
+            font-size: 1rem;
+            background: white;
+            margin-bottom: 1.5rem;
+            font-family: inherit;
+            transition: all 0.2s;
+            color: #1e293b;
+        }
+
+        .modal-body input:focus {
+            outline: none;
+            border-color: #f5b81b;
+            box-shadow: 0 0 0 3px rgba(245, 184, 27, 0.15);
+        }
+
+        .modal-body input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .modal-body input[type="number"]::-webkit-outer-spin-button,
+        .modal-body input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .modal-btn {
+            width: 100%;
+            background: #f5b81b;
+            color: #1e1e2f;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 1rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(245, 184, 27, 0.3);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-btn:hover {
+            background: #ffcc33;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(245, 184, 27, 0.4);
+        }
+
+        .modal-footer {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .modal-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .modal-header h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* ===== CARROSSEL DE IMAGENS AUTOMÁTICO ===== */
+        .gallery-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #f5b81b, #ffd700, #f5b81b, transparent);
+        }
+
+        .gallery-section::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            transition: width 0.3s ease;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #f5b81b, #ffd700, #f5b81b, transparent);
         }
 
-        .desktop-nav ul li a:hover {
-            color: var(--accent);
-        }
-
-        .desktop-nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        /* BOTÃO CONTATO MAIOR NA VERSÃO DESKTOP */
-        .contact-btn {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            padding: 14px 35px; /* Aumentado o padding para maior largura */
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            display: inline-block;
-            animation: pulse-gold 2s infinite;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        .gallery-container {
+            max-width: 1300px;
+            margin: 0 auto;
             position: relative;
-            overflow: hidden;
-            min-width: 140px; /* Largura mínima aumentada */
+            z-index: 2;
+        }
+
+        .gallery-header {
             text-align: center;
+            margin-bottom: 3rem;
         }
 
-        @keyframes pulse-gold {
-            0% {
-                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.5);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
-            }
+        .gallery-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1e1e2f;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
         }
 
-        .contact-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
-            animation: none;
+        .gallery-header h2 span {
+            color: #f5b81b;
+            position: relative;
         }
 
-        /* Menu Hambúrguer (visível apenas no mobile) */
-        .mobile-menu-btn {
-            display: none;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
+        .gallery-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #f5b81b, #ffd700);
+            border-radius: 2px;
+        }
+
+        .gallery-header p {
+            color: #64748b;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .carousel-slide:hover .carousel-overlay {
+            transform: translateY(0);
+        }
+
+        .carousel-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #f5b81b;
+        }
+
+        .carousel-overlay p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .indicator.active {
+            background: #f5b81b;
+            transform: scale(1.2);
+            box-shadow: 0 0 15px rgba(245, 184, 27, 0.5);
+        }
+
+        .indicator:hover {
+            background: #f5b81b;
+            transform: scale(1.1);
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .carousel-control {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            font-size: 22px;
-            color: var(--text);
-            cursor: pointer;
-            z-index: 1001;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-size: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow);
+            cursor: pointer;
             transition: all 0.3s ease;
+            pointer-events: auto;
         }
 
-        .mobile-menu-btn:hover {
-            background: rgba(255, 215, 0, 0.1);
+        .carousel-control:hover {
+            background: #f5b81b;
+            border-color: #f5b81b;
+            transform: scale(1.1);
         }
 
-        .mobile-nav {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 85%;
-            max-width: 350px;
-            height: 100vh;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-left: 1px solid var(--glass-border);
-            padding: 100px 30px 30px;
-            transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-            z-index: 1000;
-            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        .carousel-control:active {
+            transform: scale(0.95);
         }
 
-        .mobile-nav.active {
-            right: 0;
+        @media (max-width: 768px) {
+            .gallery-section {
+                padding: 3rem 1rem;
+            }
+            
+            .gallery-header h2 {
+                font-size: 2rem;
+            }
+            
+            .carousel-slide {
+                height: 350px;
+            }
+            
+            .carousel-overlay {
+                padding: 1.5rem;
+            }
+            
+            .carousel-overlay h3 {
+                font-size: 1.2rem;
+            }
+            
+            .carousel-control {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
         }
 
-        .mobile-nav ul {
-            list-style: none;
+        @media (max-width: 480px) {
+            .carousel-slide {
+                height: 250px;
+            }
+            
+            .carousel-overlay {
+                padding: 1rem;
+            }
+            
+            .carousel-overlay h3 {
+                font-size: 1rem;
+            }
+            
+            .carousel-overlay p {
+                font-size: 0.85rem;
+            }
         }
 
-        .mobile-nav ul li {
-            margin-bottom: 20px;
-        }
-
-        .mobile-nav ul li a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            padding: 15px 20px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .mobile-nav ul li a:hover {
-            color: var(--accent);
-            background: rgba(255, 215, 0, 0.08);
-            border-color: rgba(255, 215, 0, 0.2);
-        }
-
-        .mobile-nav ul li:last-child a {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            text-align: center;
-            margin-top: 10px;
-            animation: pulse-gold 2s infinite;
-            padding: 14px 25px;
-            font-size: 16px;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(3px);
-            z-index: 999;
-            display: none;
-        }
-
-        .overlay.active {
-            display: block;
-        }
-
-        /* Conteúdo Principal - SLIDE */
-        .hero-slider {
-            height: 85vh;
-            min-height: 600px;
+        /* ===== SEÇÃO CLIENTES ATENDIDOS ===== */
+        .clients-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 5rem 2rem;
             position: relative;
             overflow: hidden;
-            border-radius: 0 0 30px 30px;
-            box-shadow: var(--shadow);
         }
 
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.2s ease;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        /* Overlay preto suave sobre a imagem */
-        .slide::after {
+        .clients-section::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #f5b81b, #ffd700, #f5b81b, transparent);
         }
 
-        .slide-content {
+        .clients-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .clients-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .clients-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1e1e2f;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .clients-header h2 span {
+            color: #f5b81b;
+            position: relative;
+        }
+
+        .clients-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #f5b81b, #ffd700);
+            border-radius: 2px;
+        }
+
+        .clients-header p {
+            color: #64748b;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+        }
+
+        .clients-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(245, 184, 27, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: #f5b81b;
+            box-shadow: 0 20px 40px rgba(245, 184, 27, 0.15);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #f5b81b;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #1e1e2f;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-description {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 2rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .client-logo {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(245, 184, 27, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+        }
+
+        .client-logo:hover {
+            transform: translateY(-5px);
+            border-color: #f5b81b;
+            box-shadow: 0 15px 30px rgba(245, 184, 27, 0.1);
+        }
+
+        .client-logo-img {
+            width: 100%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .client-logo-img img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .client-logo:hover .client-logo-img img {
+            transform: scale(1.1);
+        }
+
+        /* Fallback para quando a imagem não carrega */
+        .client-logo-img.no-image {
+            background: linear-gradient(135deg, #f5b81b20, #ffd70020);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .client-logo-img.no-image::after {
+            content: "Logo";
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 2;
-            width: 90%;
-            max-width: 900px;
-            padding: 0;
-            background: transparent;
-            backdrop-filter: none;
-            border-radius: 0;
-            border: none;
-            box-shadow: none;
+            color: #f5b81b;
+            font-weight: 600;
+            font-size: 1rem;
+            opacity: 0.7;
         }
 
-        .slide-content h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 25px;
-            color: white;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            line-height: 1.2;
+        @media (max-width: 1024px) {
+            .clients-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .clients-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .clients-header h2 {
+                font-size: 2.3rem;
+            }
         }
 
-        .slide-content p {
-            font-size: 1.25rem;
-            margin-bottom: 35px;
-            line-height: 1.7;
-            color: white;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        @media (max-width: 768px) {
+            .clients-section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .clients-header h2 {
+                font-size: 2rem;
+            }
+            
+            .clients-stats {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .client-logo {
+                min-height: 150px;
+                padding: 1.5rem 0.5rem;
+            }
+            
+            .client-logo-img {
+                height: 100px;
+            }
         }
 
-        /* Texto específico dos 15 anos em branco completo */
-        .experience-text {
-            color: white !important;
-            font-weight: 500;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        @media (max-width: 480px) {
+            .clients-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            padding: 16px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+        /* ===== SEÇÃO POR QUE ESCOLHER A GARRA ===== */
+        .why-choose-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+            padding: 5rem 2rem;
             position: relative;
-            z-index: 2;
+            overflow: hidden;
         }
 
-        .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 25px rgba(255, 215, 0, 0.4);
-        }
-
-        /* Animações de entrada */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.9s ease, transform 0.9s ease;
-        }
-
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Seções */
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 70px;
-        }
-
-        .section-title h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.8rem;
-            background: linear-gradient(135deg, var(--text), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .section-title p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Missão, Visão e Valores */
-        .mvvm-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 35px;
-        }
-
-        .mvvm-item {
-            flex: 1;
-            min-width: 300px;
-            background: var(--bg-light);
-            border-radius: 22px;
-            padding: 45px 35px;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            box-shadow: var(--shadow);
-        }
-
-        .mvvm-item:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
-        }
-
-        .mvvm-item i {
-            font-size: 3.2rem;
-            margin-bottom: 30px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .mvvm-item h3 {
-            font-size: 1.9rem;
-            margin-bottom: 22px;
-            color: var(--text);
-        }
-
-        .mvvm-item p {
-            color: var(--text-light);
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        /* Marcas Representadas - COM LINKS */
-        .brands-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 70px;
-            padding: 50px 40px;
-            background: var(--bg-section);
-            border-radius: 25px;
-        }
-
-        .brand-logo {
-            width: 230px;
-            height: 130px;
-            background: white;
-            border-radius: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            transition: all 0.4s ease;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            text-decoration: none; /* Remove sublinhado do link */
-            position: relative;
-        }
-
-        .brand-logo:hover {
-            transform: scale(1.08);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .brand-logo img {
-            max-width: 100%;
-            max-height: 100%;
-            /* Removido o filter para manter as cores originais */
-            transition: transform 0.3s ease;
-        }
-
-        .brand-logo:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Ícone de link externo */
-        .brand-link-icon {
+        .why-choose-section::before {
+            content: '';
             position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--primary);
-            color: white;
-            width: 28px;
-            height: 28px;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #f5b81b, #ffd700, #f5b81b, transparent);
+        }
+
+        .why-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .why-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1e1e2f;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .why-header h2 span {
+            color: #f5b81b;
+            position: relative;
+        }
+
+        .why-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #f5b81b, #ffd700);
+            border-radius: 2px;
+        }
+
+        .why-header p {
+            color: #64748b;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 30px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(245, 184, 27, 0.1);
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: linear-gradient(180deg, rgba(245, 184, 27, 0.05), transparent);
+            transition: height 0.4s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-15px);
+            border-color: #f5b81b;
+            box-shadow: 0 20px 40px rgba(245, 184, 27, 0.15);
+        }
+
+        .benefit-card:hover::before {
+            height: 100%;
+        }
+
+        .benefit-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #f5b81b20, #ffd70020);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
-            opacity: 0;
-            transform: translateY(-5px);
+            margin: 0 auto 1.8rem;
+            box-shadow: 0 10px 25px rgba(245, 184, 27, 0.2);
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+            border: 2px solid #f5b81b40;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(135deg, #f5b81b30, #ffd70030);
+            border-color: #f5b81b;
+            box-shadow: 0 15px 35px rgba(245, 184, 27, 0.3);
+        }
+
+        .benefit-icon svg {
+            width: 45px;
+            height: 45px;
+            color: #f5b81b;
+            filter: drop-shadow(0 2px 4px rgba(245, 184, 27, 0.3));
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e1e2f;
+            margin-bottom: 0.8rem;
+            position: relative;
             z-index: 2;
         }
 
-        .brand-logo:hover .brand-link-icon {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Especificações de Geradores */
-        .generators-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 45px;
-        }
-
-        .generator-item {
-            flex: 1;
-            min-width: 300px;
-            background: var(--bg-light);
-            border-radius: 22px;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        .generator-item:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
-        }
-
-        .generator-img {
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .generator-content {
-            padding: 35px 30px;
-        }
-
-        .generator-content h3 {
-            font-size: 1.9rem;
-            color: var(--text);
-            margin-bottom: 18px;
-        }
-
-        .generator-content > p {
-            color: var(--text-light);
-            margin-bottom: 25px;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        .specs {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.7s ease;
-        }
-
-        .specs.expanded {
-            max-height: 650px;
-        }
-
-        .specs ul {
-            list-style: none;
-            margin-top: 25px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
-        .specs ul li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-        }
-
-        .specs ul li:last-child {
-            border-bottom: none;
-        }
-
-        .specs ul li strong {
-            color: var(--text);
-            min-width: 150px;
-            display: inline-block;
-            font-weight: 600;
-        }
-
-        .specs-toggle {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            border: none;
-            padding: 14px 30px;
-            border-radius: 50px;
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.25);
-            width: 100%;
-        }
-
-        .specs-toggle:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.35);
-        }
-
-        .specs-toggle i {
-            transition: transform 0.4s ease;
-        }
-
-        .specs-toggle.expanded i {
-            transform: rotate(180deg);
-        }
-
-        /* Cobertura RJ - MODIFICADA */
-        .coverage {
-            text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 110px 50px;
-            border-radius: 30px;
-            margin: 50px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .coverage h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.3rem;
-            color: var(--primary);
-            margin-bottom: 30px;
-            line-height: 1.2;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .coverage p {
-            font-size: 1.35rem;
-            max-width: 850px;
-            margin: 0 auto 45px;
-            line-height: 1.8;
-            color: white;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--bg-section);
-            padding: 90px 0 50px;
-            border-top: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-
-        .footer-column {
-            flex: 1;
-            min-width: 260px;
-        }
-
-        .footer-column h3 {
-            font-size: 1.6rem;
-            color: var(--text);
-            margin-bottom: 30px;
+        .benefit-card p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.6;
             position: relative;
-            padding-bottom: 18px;
+            z-index: 2;
         }
 
-        .footer-column h3::after {
+        .benefit-highlight {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #f5b81b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .why-header h2 {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .why-choose-section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .why-header h2 {
+                font-size: 2rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .benefit-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* ===== CARROSSEL DE DEPOIMENTOS ===== */
+        .testimonials-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #f5b81b, transparent);
+        }
+
+        .testimonials-section::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 70px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--accent));
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #f5b81b, transparent);
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 1300px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #1e1e2f;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #f5b81b, #ffd700);
             border-radius: 2px;
+        }
+
+        .section-title p {
+            color: #64748b;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonials-carousel {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 1rem 0.5rem;
+        }
+
+        .testimonials-container {
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            flex: 0 0 calc(33.333% - 1.35rem);
+            min-width: 280px;
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(245, 184, 27, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+            border-color: rgba(245, 184, 27, 0.3);
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            color: rgba(245, 184, 27, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-rating {
+            color: #f5b81b;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #334155;
+            margin-bottom: 1.8rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.2rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #f5b81b, #ffd700);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(245, 184, 27, 0.3);
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e1e2f;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .testimonials-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .testimonials-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #f5b81b;
+            color: #f5b81b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonials-btn:hover {
+            background: #f5b81b;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(245, 184, 27, 0.4);
+        }
+
+        .testimonials-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            border-color: #cbd5e1;
+            color: #cbd5e1;
+        }
+
+        .testimonials-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .testimonials-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .testimonials-dot.active {
+            background: #f5b81b;
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(245, 184, 27, 0.5);
+        }
+
+        @media (max-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-section {
+                padding: 3rem 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .testimonial-card {
+                flex: 0 0 100%;
+            }
+        }
+
+        /* ===== SEÇÃO DE CERTIFICAÇÕES MINIMALISTA ===== */
+        .certifications-section {
+            background: #ffffff;
+            padding: 2.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid #eaeef2;
+            border-bottom: 1px solid #eaeef2;
+        }
+
+        .certifications-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem 3rem;
+        }
+
+        .certification-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e1e2f;
+            transition: all 0.2s ease;
+            padding: 0.25rem 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .certification-item:hover {
+            border-bottom-color: #f5b81b;
+            transform: translateY(-2px);
+        }
+
+        .certification-code {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #f5b81b;
+            letter-spacing: 0.5px;
+        }
+
+        .certification-name {
+            font-weight: 400;
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        .certification-divider {
+            width: 1px;
+            height: 20px;
+            background: #e2e8f0;
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .certifications-section {
+                padding: 2rem 1rem;
+            }
+            
+            .certifications-container {
+                gap: 1.2rem 1.8rem;
+            }
+            
+            .certification-code {
+                font-size: 1rem;
+            }
+            
+            .certification-name {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .certifications-container {
+                gap: 1rem;
+            }
+            
+            .certification-item {
+                width: calc(50% - 0.5rem);
+                justify-content: center;
+            }
+            
+            .certification-divider {
+                display: none;
+            }
+        }
+
+        /* ===== FOOTER ELEGANTE ===== */
+        .elegant-footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            padding: 4rem 2rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .elegant-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.5), transparent);
+        }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-col h3 {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #ffd700, transparent);
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffd700;
+            transform: translateX(5px);
         }
 
         .social-links {
             display: flex;
-            gap: 18px;
+            gap: 1.5rem;
+            margin-top: 1rem;
         }
 
         .social-links a {
-            display: inline-flex;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
             align-items: center;
             justify-content: center;
-            width: 52px;
-            height: 52px;
-            background: white;
-            border-radius: 50%;
-            color: var(--text);
-            font-size: 1.3rem;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 215, 0, 0.3);
         }
 
         .social-links a:hover {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            transform: translateY(-6px) scale(1.1);
+            background: #ffd700;
+            color: #1a1a2e;
+            transform: translateY(-3px);
+            border-color: transparent;
         }
 
-        .contact-info p {
-            margin-bottom: 20px;
+        .footer-bottom {
+            max-width: 1300px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            color: var(--text-light);
-            line-height: 1.6;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
         }
 
-        .contact-info i {
-            color: var(--accent);
-            width: 22px;
-            font-size: 1.2rem;
-            margin-top: 4px;
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .newsletter-form input {
-            width: 100%;
-            padding: 18px 25px;
-            background: white;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50px;
-            color: var(--text);
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
+        .footer-bottom a:hover {
+            color: #ffd700;
         }
 
-        .newsletter-form input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.15);
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
         }
 
-        .copyright {
-            text-align: center;
-            padding-top: 50px;
-            border-top: 1px solid rgba(0, 0, 0, 0.08);
-            color: var(--text-light);
-            font-size: 1rem;
-        }
-
-        /* Responsividade */
-        @media (max-width: 1100px) {
-            .slide-content h1 {
-                font-size: 3rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2.5rem;
-            }
-            
-            .coverage h2 {
-                font-size: 2.8rem;
-            }
-            
-            .brand-logo {
-                width: 200px;
-                height: 120px;
-                padding: 25px;
-            }
-        }
-
-        @media (max-width: 900px) {
-            /* Menu hambúrguer visível apenas no mobile */
-            .mobile-menu-btn {
-                display: flex;
-            }
-            
-            /* Menu desktop oculto no mobile */
-            .desktop-nav {
-                display: none;
-            }
-
-            .hero-slider {
-                height: 75vh;
-                min-height: 550px;
-            }
-
-            .slide-content {
-                width: 95%;
-            }
-
-            .slide-content h1 {
-                font-size: 2.6rem;
-            }
-            
-            .slide-content p {
-                font-size: 1.1rem;
-            }
-
-            .feminine-bar {
-                font-size: 14px;
-                padding: 10px 0;
-            }
-            
-            .feminine-content i {
-                font-size: 16px;
-            }
-
-            .mvvm-container, .generators-container {
+        @media (max-width: 768px) {
+            .footer-bottom {
                 flex-direction: column;
-                gap: 30px;
-            }
-
-            .generator-item {
-                width: 100%;
-            }
-
-            .coverage h2 {
-                font-size: 2.4rem;
+                text-align: center;
             }
             
-            .coverage {
-                padding: 80px 30px;
-            }
-            
-            .coverage p {
-                font-size: 1.2rem;
-            }
-            
-            /* Botão contato no mobile menu */
-            .mobile-nav ul li:last-child a {
-                padding: 14px 25px;
-                font-size: 16px;
-            }
-            
-            /* Logos das marcas - mobile */
-            .brands-container {
-                gap: 40px;
-                padding: 40px 30px;
-            }
-            
-            .brand-logo {
-                width: 180px;
-                height: 110px;
-                padding: 20px;
-            }
-            
-            .brand-link-icon {
-                width: 24px;
-                height: 24px;
-                font-size: 10px;
+            .footer-bottom-links {
+                justify-content: center;
             }
         }
 
-        @media (min-width: 901px) {
-            /* Menu hambúrguer oculto no desktop */
-            .mobile-menu-btn {
-                display: none;
-            }
-            
-            /* Botão contato maior no desktop */
-            .contact-btn {
-                padding: 14px 40px; /* Ainda maior no desktop */
-                font-size: 16px;
-                min-width: 150px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .section-title h2 {
-                font-size: 2.2rem;
-            }
-
-            .slide-content h1 {
-                font-size: 2.2rem;
-                margin-bottom: 20px;
-            }
-            
-            .slide-content p {
-                font-size: 1rem;
-                margin-bottom: 25px;
-            }
-
-            .feminine-bar {
-                font-size: 13px;
-                padding: 8px 0;
-            }
-            
-            .feminine-content {
-                gap: 8px;
-            }
-            
-            .feminine-content i {
-                font-size: 14px;
-            }
-
-            .mvvm-item, .generator-item {
-                min-width: 100%;
-            }
-
-            .brand-logo {
-                width: 160px;
-                height: 100px;
-                padding: 15px;
-            }
-            
-            .brands-container {
-                gap: 30px;
-                padding: 30px 20px;
-            }
-
-            .coverage h2 {
-                font-size: 2rem;
-            }
-            
-            .coverage p {
-                font-size: 1.1rem;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 50px;
-            }
-            
-            .logo-container {
-                width: 150px;
-                height: 50px;
-            }
-            
-            .mobile-nav ul li:last-child a {
-                padding: 12px 20px;
-                font-size: 15px;
-            }
+        .attribution {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            color: rgba(255,255,255,0.2);
+            font-size: 0.7rem;
+            z-index: 5;
         }
     </style>
+    
+    <!-- SCHEMA.ORG MARKUP PARA SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Garra Geradores",
+        "image": "https://www.garrageradores.com.br/logo.svg",
+        "logo": "https://www.garrageradores.com.br/logo.svg",
+        "url": "https://www.garrageradores.com.br",
+        "telephone": "+5521971486886",
+        "description": "Especialistas em geradores de energia. Venda, locação e manutenção de geradores com equipe própria e atendimento 24h.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua das Energias, 123",
+            "addressLocality": "Rio de Janeiro",
+            "addressRegion": "RJ",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-22.9068",
+            "longitude": "-43.1729"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/garrageradores",
+            "https://www.instagram.com/garrageradores",
+            "https://www.linkedin.com/company/garrageradores"
+        ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Header com Efeito Vidro -->
-    <header>
-        <div class="container nav-container">
-            <div class="logo-container">
-                <!-- Logo da pasta -->
-                <img src="logo.svg" alt="Garra Geradores">
-            </div>
-            
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li>
-                        <a href="#contato" class="contact-btn">Contato</a>
-                    </li>
-                </ul>
-            </nav>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <nav class="mobile-nav" id="mobileNav">
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-
-            <div class="overlay" id="overlay"></div>
+<header id="mainHeader">
+    <div class="header-container">
+        <div class="logo">
+            <img src="logo.svg" alt="Garra Geradores - Especialistas em Geradores de Energia">
         </div>
-    </header>
 
-    <!-- Barra Rosa - Gerando Energia pela Potência Feminina -->
-    <div class="feminine-bar">
-        <div class="container">
-            <div class="feminine-content">
-                <i class="fas fa-seedling"></i>
-                <span>Gerando Energia pela Potência Feminina</span>
-                <i class="fas fa-bolt"></i>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#" title="Página inicial">HOME</a></li>
+            <li><a href="#" title="Sobre a Garra Geradores">SOBRE</a></li>
+            <li><a href="#" title="Serviços de geradores">SERVIÇOS</a></li>
+            <li><a href="#" class="btn-contato" title="Entre em contato">CONTATO</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <div class="hero-section hero-desktop">
+        <div class="hero-container">
+            <div class="form-card">
+                <h2>Fale com a Garra</h2>
+
+                <form id="contatoForm">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Opcional">
+
+                    <label for="interesse">Tipo de serviço</label>
+                    <select id="interesse" name="interesse" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="Comprar">Comprar gerador</option>
+                        <option value="Locar">Locar gerador</option>
+                        <option value="Manutenção">Manutenção</option>
+                    </select>
+
+                    <button type="button" class="btn-enviar" id="whatsappBtn">
+                        ENVIAR
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    Atendimento via WhatsApp
+                </div>
+            </div>
+        </div>
+        <div class="attribution">Garra Geradores</div>
+    </div>
+</main>
+
+<!-- Botão WhatsApp Flutuante Verde -->
+<div class="whatsapp-float">
+    <a href="https://wa.me/5521971486886?text=Olá!%20Gostaria%20de%20informações%20sobre%20geradores" target="_blank" aria-label="WhatsApp Garra Geradores">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.087-.177.181-.076.355.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.13.332.202.043.072.043.419-.101.824z"/>
+        </svg>
+    </a>
+</div>
+
+<!-- Modal Pop-up -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-container">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-header">
+            <h3 id="modalTitle">Solicitar Orçamento</h3>
+            <p id="modalSubtitle">Venda de Geradores</p>
+        </div>
+        <div class="modal-body">
+            <form id="modalForm">
+                <input type="hidden" id="modalTipo" value="venda">
+                
+                <label for="modalNome">Nome completo</label>
+                <input type="text" id="modalNome" placeholder="Seu nome completo" required>
+
+                <label for="modalEmpresa">Empresa</label>
+                <input type="text" id="modalEmpresa" placeholder="Nome da empresa">
+
+                <label for="modalQuantidade">Quantidade de geradores</label>
+                <input type="number" id="modalQuantidade" placeholder="Ex: 1" min="1" value="1" required>
+            </form>
+        </div>
+        <button class="modal-btn" id="modalEnviar">Enviar Solicitação</button>
+        <div class="modal-footer">Você será redirecionado para o WhatsApp</div>
+    </div>
+</div>
+
+<!-- Seção de Serviços -->
+<section class="services-section">
+    <div class="services-container">
+        <div class="services-header">
+            <h2>Nossos <span>Serviços</span></h2>
+            <p>Soluções completas em geração de energia para sua empresa</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Venda de Geradores -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1-.45-1.41-.81-1.41-1.44 0-.69.57-1.2 1.48-1.2.77 0 1.33.38 1.59 1.1.13.3.44.51.78.51h.26c.6 0 1.04-.57.78-1.1-.51-1.04-1.5-1.81-2.87-1.95V6.5c0-.28-.22-.5-.5-.5h-.5c-.28 0-.5.22-.5.5v1.57c-1.15.16-2.2.95-2.2 2.28 0 1.44 1.06 2.09 2.42 2.66 1.15.48 1.41.86 1.41 1.48 0 .58-.44 1.19-1.53 1.19-.97 0-1.53-.42-1.78-1.18-.13-.31-.44-.52-.79-.52h-.26c-.61 0-1.05.6-.77 1.14.57 1.1 1.6 1.83 3.06 1.98v1.56c0 .28.22.5.5.5h.5c.28 0 .5-.22.5-.5v-1.58c1.24-.17 2.27-1 2.27-2.33 0-1.52-1.14-2.12-2.54-2.71z"/>
+                    </svg>
+                </div>
+                <h3>Venda</h3>
+                <p>Geradores novos e seminovos das melhores marcas</p>
+                <ul class="service-features">
+                    <li>Equipamentos certificados</li>
+                    <li>Garantia estendida</li>
+                    <li>Entrega e instalação</li>
+                    <li>Financiamento disponível</li>
+                </ul>
+                <button class="service-btn" data-servico="venda">Saiba mais</button>
+            </div>
+
+            <!-- Locação de Geradores -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 9V5h-2v2h-2V5h-2v2h-2V5h-2v2H8V5H6v2H4V5H2v14h20v-2h-2v-2h2v-2h-2v-2h2V9h-2zm-2 4h-2v2h2v2h-2v2H6v-2H4v-2h2v-2H4V9h2V7h2v2h2V7h2v2h2V7h2v2h2v2h-2v2h2v2z"/>
+                    </svg>
+                </div>
+                <h3>Locação</h3>
+                <p>Solução flexível para eventos, obras e emergências</p>
+                <ul class="service-features">
+                    <li>Contratos personalizados</li>
+                    <li>Manutenção inclusa</li>
+                    <li>Suporte 24/7</li>
+                    <li>Entrega rápida</li>
+                </ul>
+                <button class="service-btn" data-servico="locacao">Saiba mais</button>
+            </div>
+
+            <!-- Manutenção de Geradores -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"/>
+                    </svg>
+                </div>
+                <h3>Manutenção</h3>
+                <p>Preventiva e corretiva com equipe especializada</p>
+                <ul class="service-features">
+                    <li>Check-up completo</li>
+                    <li>Peças originais</li>
+                    <li>Contratos de manutenção</li>
+                    <li>Atendimento emergencial</li>
+                </ul>
+                <button class="service-btn" data-servico="manutencao">Saiba mais</button>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Slide de Imagens -->
-    <section class="hero-slider">
-        <div class="slide active" id="slide1"></div>
-        <div class="slide" id="slide2"></div>
-        <div class="slide" id="slide3"></div>
-        
-        <div class="slide-content">
-            <h1>A Potência que seu Negócio Necessita!</h1>
-            <p class="experience-text">Há mais de 15 anos fornecendo soluções energéticas de alta qualidade para todo o Rio de Janeiro, oferecemos os melhores geradores do mercado, com suporte especializado e atendimento 24 horas, garantindo segurança, eficiência e tranquilidade para nossos clientes em qualquer situação.</p>
-
-            <a href="#servicos" class="btn">Conheça Nossos Geradores</a>
+<!-- CARROSSEL AUTOMÁTICO DE IMAGENS (10 imagens) -->
+<section class="gallery-section">
+    <div class="gallery-container">
+        <div class="gallery-header">
+            <h2>Nossos <span>Projetos</span></h2>
+            <p>Conheça alguns dos trabalhos realizados pela Garra Geradores</p>
         </div>
-    </section>
 
-    <!-- Missão, Visão e Valores -->
-    <section id="sobre">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>Nossa Essência</h2>
-                <p>Conheça os princípios que norteiam nosso trabalho e nos tornam referência no mercado de geradores</p>
+        <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides">
+                <!-- Slide 1 -->
+                <div class="carousel-slide">
+                    <img src="imagens/01.jpg" alt="Projeto 1 - Indústria Química" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+1'">
+                    <div class="carousel-overlay">
+                        <h3>Indústria Química</h3>
+                        <p>Instalação de gerador de 500kVA para indústria química em São Paulo</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <img src="imagens/02.jpg" alt="Projeto 2 - Hospital Regional" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+2'">
+                    <div class="carousel-overlay">
+                        <h3>Hospital Regional</h3>
+                        <p>Sistema de emergência com 3 geradores de 300kVA cada</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <img src="imagens/03.jpg" alt="Projeto 3 - Festival de Música" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+3'">
+                    <div class="carousel-overlay">
+                        <h3>Festival de Música</h3>
+                        <p>Locação de 8 geradores para evento com 50 mil pessoas</p>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                    <img src="imagens/04.jpg" alt="Projeto 4 - Data Center" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+4'">
+                    <div class="carousel-overlay">
+                        <h3>Data Center</h3>
+                        <p>Instalação de geradores com transferência automática</p>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-slide">
+                    <img src="imagens/05.jpg" alt="Projeto 5 - Condomínio Comercial" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+5'">
+                    <div class="carousel-overlay">
+                        <h3>Condomínio Comercial</h3>
+                        <p>Solução para 4 torres comerciais em Brasília</p>
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="carousel-slide">
+                    <img src="imagens/06.jpg" alt="Projeto 6 - Aeroporto" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+6'">
+                    <div class="carousel-overlay">
+                        <h3>Aeroporto</h3>
+                        <p>Manutenção preventiva em geradores do aeroporto internacional</p>
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="carousel-slide">
+                    <img src="imagens/07.jpg" alt="Projeto 7 - Shopping Center" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+7'">
+                    <div class="carousel-overlay">
+                        <h3>Shopping Center</h3>
+                        <p>Modernização do sistema de emergência</p>
+                    </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="carousel-slide">
+                    <img src="imagens/08.jpg" alt="Projeto 8 - Fazenda de Agronegócio" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+8'">
+                    <div class="carousel-overlay">
+                        <h3>Fazenda de Agronegócio</h3>
+                        <p>Irrigação com geradores de alta potência</p>
+                    </div>
+                </div>
+                <!-- Slide 9 -->
+                <div class="carousel-slide">
+                    <img src="imagens/09.jpg" alt="Projeto 9 - Estádio de Futebol" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+9'">
+                    <div class="carousel-overlay">
+                        <h3>Estádio de Futebol</h3>
+                        <p>Fornecimento de energia para jogos noturnos</p>
+                    </div>
+                </div>
+                <!-- Slide 10 -->
+                <div class="carousel-slide">
+                    <img src="imagens/10.jpg" alt="Projeto 10 - Base de Mineração" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a2e/f5b81b?text=Projeto+10'">
+                    <div class="carousel-overlay">
+                        <h3>Base de Mineração</h3>
+                        <p>Geradores de 1000kVA para operação contínua</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="mvvm-container">
-                <div class="mvvm-item animate-on-scroll">
-                    <i class="fas fa-bullseye"></i>
-                    <h3>Missão</h3>
-                    <p>Fornecer soluções energéticas confiáveis e de alta qualidade, garantindo a continuidade dos negócios de nossos clientes através de equipamentos de ponta e suporte especializado.</p>
-                </div>
+            <!-- Controles do Carrossel -->
+            <div class="carousel-controls">
+                <button class="carousel-control" id="prevSlide" aria-label="Anterior">←</button>
+                <button class="carousel-control" id="nextSlide" aria-label="Próximo">→</button>
+            </div>
 
-                <div class="mvvm-item animate-on-scroll">
-                    <i class="fas fa-eye"></i>
-                    <h3>Visão</h3>
-                    <p>Ser reconhecida como a empresa líder em fornecimento de geradores e soluções energéticas no Rio de Janeiro, superando as expectativas dos clientes através da inovação e excelência.</p>
-                </div>
+            <!-- Indicadores -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <!-- Serão gerados via JavaScript -->
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div class="mvvm-item animate-on-scroll">
-                    <i class="fas fa-heart"></i>
-                    <h3>Valores</h3>
-                    <p>Compromisso com a qualidade, transparência nas relações, atendimento personalizado, responsabilidade ambiental e paixão por oferecer a melhor solução para cada cliente.</p>
+<!-- Seção Clientes Atendidos -->
+<section class="clients-section">
+    <div class="clients-container">
+        <div class="clients-header">
+            <h2>Clientes que <span>confiam na Garra</span></h2>
+            <p>Empresas de diversos setores já contaram com nossas soluções em geração de energia</p>
+        </div>
+
+        <div class="clients-stats">
+            <div class="stat-card">
+                <div class="stat-number">+500</div>
+                <div class="stat-label">Clientes Atendidos</div>
+                <div class="stat-description">Em todo o Brasil</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+1000</div>
+                <div class="stat-label">Projetos Realizados</div>
+                <div class="stat-description">Com sucesso</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Anos de Mercado</div>
+                <div class="stat-description">Experiência e tradição</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Suporte</div>
+                <div class="stat-description">Disponível todos os dias</div>
+            </div>
+        </div>
+
+        <div class="clients-grid">
+            <!-- Cliente 1 - Indústria -->
+            <div class="client-logo">
+                <div class="client-logo-img">
+                    <img src="a.png" alt="Indústrias Silva" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                </div>
+            </div>
+
+            <!-- Cliente 2 - Hospital -->
+            <div class="client-logo">
+                <div class="client-logo-img">
+                    <img src="b.webp" alt="Hospital São Lucas" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                </div>
+            </div>
+
+            <!-- Cliente 3 - Eventos -->
+            <div class="client-logo">
+                <div class="client-logo-img">
+                    <img src="c.webp" alt="Eventos Premium" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                </div>
+            </div>
+
+            <!-- Cliente 4 - Construção -->
+            <div class="client-logo">
+                <div class="client-logo-img">
+                    <img src="d.jpg" alt="Construtora Mendes" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                </div>
+            </div>
+
+            <!-- Cliente 5 - Shopping -->
+            <div class="client-logo">
+                <div class="client-logo-img">
+                    <img src="e.png" alt="Shopping Center" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                </div>
+            </div>
+
+            <!-- Cliente 6 - Agronegócio -->
+            <div class="client-logo">
+                <div class="client-logo-img">
+                    <img src="f.webp" alt="Agro Forte" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Marcas Representadas - COM LINKS -->
-    <section>
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>Marcas que Representamos</h2>
-                <p>Trabalhamos com as melhores marcas do mercado para garantir qualidade e durabilidade</p>
+<!-- Seção Por que escolher a Garra Geradores? -->
+<section class="why-choose-section">
+    <div class="why-container">
+        <div class="why-header">
+            <h2>Por que escolher a <span>Garra Geradores?</span></h2>
+            <p>Excelência e compromisso que fazem a diferença</p>
+        </div>
+
+        <div class="benefits-grid">
+            <!-- Atendimento 24h -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.486 2 2 6.486 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.514-4.486-10-10-10zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm.5-13v5.25l4 2.25-1 1.75-5-2.75V7h2z"/>
+                    </svg>
+                </div>
+                <h3>Atendimento 24h</h3>
+                <p>Suporte completo todos os dias da semana, incluindo feriados, para garantir sua tranquilidade</p>
+                <div class="benefit-highlight">Sempre disponíveis</div>
             </div>
 
-            <div class="brands-container">
-                <a href="#" target="_blank" rel="noopener noreferrer" class="brand-logo animate-on-scroll">
-                    <span class="brand-link-icon">
-                        <i class="fas fa-external-link-alt"></i>
-                    </span>
-                    <!-- Logo Caterpillar colorida -->
-                    <img src="https://tse1.mm.bing.net/th/id/OIP.LpETKuZB-WAfFX8WyJd23QHaDY?rs=1&pid=ImgDetMain&o=7&rm=3" alt="mwm">
-                </a>
-                
-                <a href="#" target="_blank" rel="noopener noreferrer" class="brand-logo animate-on-scroll">
-                    <span class="brand-link-icon">
-                        <i class="fas fa-external-link-alt"></i>
-                    </span>
-                    <!-- Logo Cummins colorida -->
-                    <img src="https://dcdn.mitiendanube.com/stores/391/892/categories/download-2-5e64528ec40825830515940637035507-240-0.png" alt="toyama">
-                </a>
+            <!-- Equipe própria -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <h3>Equipe própria</h3>
+                <p>Técnicos altamente capacitados e registrados, nenhum serviço terceirizado</p>
+                <div class="benefit-highlight">100% dedicada</div>
             </div>
-            
-            <div style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--text-light);">
-                <p><i class="fas fa-external-link-alt" style="margin-right: 8px;"></i> Clique nos logos para visitar os sites oficiais das marcas</p>
+
+            <!-- Suporte emergencial -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                    </svg>
+                </div>
+                <h3>Suporte emergencial</h3>
+                <p>Atendimento prioritário para situações críticas com resposta em até 1 hora</p>
+                <div class="benefit-highlight">Rápido e eficiente</div>
+            </div>
+
+            <!-- Transparência -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <h3>Transparência</h3>
+                <p>Orçamentos detalhados, contratos claros e acompanhamento em tempo real</p>
+                <div class="benefit-highlight">Confiança total</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Especificações de Geradores -->
-    <section id="servicos">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>Nossos Geradores</h2>
-                <p>Conheça nossa linha completa de geradores para todas as necessidades</p>
-            </div>
+<!-- Carrossel de Depoimentos -->
+<section class="testimonials-section">
+    <div class="section-title">
+        <h2>O que nossos clientes dizem</h2>
+        <p>Histórias reais de quem confiou na Garra Geradores</p>
+    </div>
 
-            <div class="generators-container">
-                <div class="generator-item animate-on-scroll">
-                    <div class="generator-img" style="background-image: url('01.png');"></div>
-                    <div class="generator-content">
-                        <h3>Geradores a Diesel</h3>
-                        <p>Soluções de alta potência para indústrias, hospitais, shoppings e grandes empreendimentos. Geradores silenciados (07 db(A) a 1,5m) com bacia de contenção para segurança ambiental.</p>
-                        
-                        <div class="specs" id="specs1">
-                            <ul>
-                                <li><strong>Potência:</strong> 100 kVA a 2500 kVA</li>
-                                <li><strong>Combustível:</strong> Diesel</li>
-                                <li><strong>Silenciamento:</strong> 07 db(A) a 1,5 metros</li>
-                                <li><strong>Segurança Ambiental:</strong> Bacia de contenção para fluidos</li>
-                                <li><strong>Tanque Externo:</strong> Até 1000 litros</li>
-                                <li><strong>Aplicação:</strong> Uso contínuo</li>
-                                <li><strong>Controle:</strong> Painel digital com monitoramento remoto</li>
-                                <li><strong>Acessórios:</strong> Caixa de distribuição, QTA's, QTM's, cabos 35-240 mm²</li>
-                                <li><strong>Garantia:</strong> 2 anos</li>
-                            </ul>
+    <div class="testimonials-carousel">
+        <div class="testimonials-container">
+            <div class="testimonials-track" id="testimonialsTrack">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Excelente atendimento e suporte técnico. O gerador que alugamos para nosso evento funcionou perfeitamente durante todo o período. Equipe muito profissional!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CS</div>
+                        <div class="author-info">
+                            <h4>Carlos Silva</h4>
+                            <p>Eventos Silva</p>
                         </div>
-                        
-                        <button class="specs-toggle" data-target="specs1">
-                            <span>Ver Especificações Completas</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
                     </div>
                 </div>
 
-                <div class="generator-item animate-on-scroll">
-                    <div class="generator-img" style="background-image: url('https://toyama.com.br/wp-content/uploads/2024/04/Gerador_TG10000CXE-XP-DR_201-036DR_600x600_01.jpg');"></div>
-                    <div class="generator-content">
-                        <h3>Geradores Toyama</h3>
-                        <p>Mais de 70 modelos para atender comércio, indústria e residências com a força dos motores Toyama. Soluções versáteis para diferentes necessidades energéticas.</p>
-                        
-                        <div class="specs" id="specs2">
-                            <ul>
-                                <li><strong>Modelos Disponíveis:</strong> Mais de 70 opções</li>
-                                <li><strong>Potência:</strong> 10 kVA a 150 kVA</li>
-                                <li><strong>Combustível:</strong> Diesel ou Gasolina</li>
-                                <li><strong>Aplicação:</strong> Comércio, indústria e residências</li>
-                                <li><strong>Controle:</strong> Painel automático com partida remota</li>
-                                <li><strong>Aplicação:</strong> Uso intermitente</li>
-                                <li><strong>Área de Atuação:</strong> Todo o Rio de Janeiro</li>
-                                <li><strong>Acessórios:</strong> Caixas de distribuição, QTA's, QTM's</li>
-                                <li><strong>Garantia:</strong> 1 ano</li>
-                            </ul>
+                <!-- Depoimento 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Contrato de manutenção preventiva com a Garra há 3 anos. Nunca tivemos problemas com nossos geradores. Recomendo fortemente!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MF</div>
+                        <div class="author-info">
+                            <h4>Maria Fernandes</h4>
+                            <p>Hospital São Lucas</p>
                         </div>
-                        
-                        <button class="specs-toggle" data-target="specs2">
-                            <span>Ver Especificações Completas</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Compramos um gerador de 200kVA e a instalação foi impecável. A equipe técnica é muito capacitada e o pós-venda é diferenciado."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RO</div>
+                        <div class="author-info">
+                            <h4>Roberto Oliveira</h4>
+                            <p>Indústrias RO</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 4 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Atendimento rápido e eficiente. Precisamos de um gerador emergencial e em poucas horas já estava instalado. Muito obrigado!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AP</div>
+                        <div class="author-info">
+                            <h4>Ana Paula</h4>
+                            <p>Condomínio Solar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 5 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Melhor custo-benefício do mercado. Os equipamentos são de primeira linha e o suporte técnico está sempre disponível quando precisamos."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <h4>João Mendes</h4>
+                            <p>Construtora Mendes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 6 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Equipe extremamente profissional e comprometida. A Garra Geradores superou todas as nossas expectativas. Parabéns pelo excelente trabalho!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LS</div>
+                        <div class="author-info">
+                            <h4>Luciana Santos</h4>
+                            <p>Hotel Paraíso</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Cobertura RJ -->
-    <section>
-        <div class="container">
-            <div class="coverage animate-on-scroll">
-                <h2>Cobertura em Todo o Estado do Rio de Janeiro</h2>
-                <p>Atendemos todos os municípios do estado do Rio de Janeiro, levando energia e soluções para sua empresa onde quer que você esteja. Nossa equipe técnica está pronta para atender emergências 24 horas por dia, 7 dias por semana.</p>
-                <a href="#contato" class="btn">Solicitar Orçamento Agora</a>
+        <div class="testimonials-controls">
+            <button class="testimonials-btn" id="prevTestimonial" aria-label="Anterior">←</button>
+            <button class="testimonials-btn" id="nextTestimonial" aria-label="Próximo">→</button>
+        </div>
+
+        <div class="testimonials-dots" id="testimonialsDots">
+            <span class="testimonials-dot active"></span>
+            <span class="testimonials-dot"></span>
+            <span class="testimonials-dot"></span>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Certificações Minimalista -->
+<section class="certifications-section">
+    <div class="certifications-container">
+        <!-- ISO 9001 -->
+        <div class="certification-item">
+            <span class="certification-code">ISO 9001</span>
+            <span class="certification-name">Qualidade</span>
+        </div>
+        <span class="certification-divider"></span>
+
+        <!-- ISO 14001 -->
+        <div class="certification-item">
+            <span class="certification-code">ISO 14001</span>
+            <span class="certification-name">Ambiental</span>
+        </div>
+        <span class="certification-divider"></span>
+
+        <!-- ISO 45001 -->
+        <div class="certification-item">
+            <span class="certification-code">ISO 45001</span>
+            <span class="certification-name">Segurança</span>
+        </div>
+        <span class="certification-divider"></span>
+
+        <!-- NR-10 -->
+        <div class="certification-item">
+            <span class="certification-code">NR-10</span>
+            <span class="certification-name">Segurança em Eletricidade</span>
+        </div>
+        <span class="certification-divider"></span>
+
+        <!-- NR-12 -->
+        <div class="certification-item">
+            <span class="certification-code">NR-12</span>
+            <span class="certification-name">Segurança em Máquinas</span>
+        </div>
+        <span class="certification-divider"></span>
+
+        <!-- NR-35 -->
+        <div class="certification-item">
+            <span class="certification-code">NR-35</span>
+            <span class="certification-name">Trabalho em Altura</span>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Elegante -->
+<footer class="elegant-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Garra Geradores</h3>
+            <p>Soluções completas em geração de energia com excelência e compromisso. Há mais de 15 anos garantindo energia para seus negócios.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                    </svg>
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer id="contato">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column animate-on-scroll">
-                    <h3>Redes Sociais</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-column animate-on-scroll">
-                    <h3>Contato & Localização</h3>
-                    <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Avenida Perimetral Pompilio Fuly, nº 115, QD: 05, LT: 07 - Jardim Primavera, Duque de Caxias - RJ</p>
-                        <p><i class="fas fa-phone"></i> (21) 3333-4444 | (21) 5555-6666</p>
-                        <p><i class="fas fa-mobile-alt"></i> (21) 99999-8888 (WhatsApp)</p>
-                        <p><i class="fas fa-envelope"></i> contato@garrageradores.com.br</p>
-                        <p><i class="fas fa-clock"></i> Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h</p>
-                    </div>
-                </div>
-
-                <div class="footer-column animate-on-scroll">
-                    <h3>Receba Nossas Ofertas</h3>
-                    <p style="color: var(--text-light); margin-bottom: 25px; font-size: 1.05rem;">Inscreva-se para receber novidades, promoções exclusivas e dicas sobre geradores.</p>
-                    <form class="newsletter-form" id="newsletterForm">
-                        <input type="email" placeholder="Digite seu melhor e-mail" required>
-                        <button type="submit" class="btn" style="width: 100%; padding: 18px;">Inscrever-se</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="copyright animate-on-scroll">
-                <p>&copy; 2023 Garra Geradores. Todos os direitos reservados. | A potência que seu Negócio Necessita!</p>
-            </div>
+        <div class="footer-col">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Trabalhe Conosco</a></li>
+            </ul>
         </div>
-    </footer>
 
-    <script>
-        // Menu Mobile
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileNav = document.getElementById('mobileNav');
-        const overlay = document.getElementById('overlay');
+        <div class="footer-col">
+            <h3>Serviços</h3>
+            <ul>
+                <li><a href="#">Venda de Geradores</a></li>
+                <li><a href="#">Locação</a></li>
+                <li><a href="#">Manutenção</a></li>
+                <li><a href="#">Projetos Especiais</a></li>
+                <li><a href="#">Suporte Técnico</a></li>
+            </ul>
+        </div>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-            
-            // Altera o ícone do botão
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <ul>
+                <li>📍 Rua das Energias, 123</li>
+                <li>📞 (21) 97148-6886</li>
+                <li>✉️ contato@garrageradores.com.br</li>
+                <li>🕒 Seg-Sex: 8h às 18h</li>
+            </ul>
+        </div>
+    </div>
 
-        overlay.addEventListener('click', () => {
-            mobileNav.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-            
-            // Volta para o ícone de barras
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.add('fa-bars');
-            icon.classList.remove('fa-times');
-        });
+    <div class="footer-bottom">
+        <div>&copy; 2024 Garra Geradores. Todos os direitos reservados.</div>
+        <div class="footer-bottom-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+        </div>
+    </div>
+</footer>
 
-        // Fecha o menu ao clicar em um link
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
-                
-                // Volta para o ícone de barras
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            });
-        });
-
-        // Slide de Imagens
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-
-        // URLs das imagens para desktop
-        const desktopImages = [
-            'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'
-        ];
-
-        // URLs das imagens para mobile
-        const mobileImages = [
-            'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'
-        ];
-
-        // Carrega as imagens apropriadas
-        function loadSlideImages() {
-            const isMobile = window.innerWidth <= 900;
-            const imagesToUse = isMobile ? mobileImages : desktopImages;
-            
-            slides.forEach((slide, index) => {
-                slide.style.backgroundImage = `url('${imagesToUse[index]}')`;
-            });
-        }
-
-        // Inicializa as imagens
-        loadSlideImages();
-
-        // Atualiza as imagens quando a janela for redimensionada
-        window.addEventListener('resize', loadSlideImages);
-
-        // Função para trocar slides
-        function nextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % totalSlides;
-            slides[currentSlide].classList.add('active');
-        }
-
-        // Inicia o slideshow automático
-        setInterval(nextSlide, 6000);
-
-        // Expansão de especificações
-        document.querySelectorAll('.specs-toggle').forEach(button => {
-            button.addEventListener('click', function() {
-                const targetId = this.getAttribute('data-target');
-                const targetSpecs = document.getElementById(targetId);
-                const isExpanded = targetSpecs.classList.contains('expanded');
-                
-                // Fecha todas as especificações
-                document.querySelectorAll('.specs').forEach(specs => {
-                    specs.classList.remove('expanded');
-                });
-                
-                // Remove a classe expanded de todos os botões
-                document.querySelectorAll('.specs-toggle').forEach(btn => {
-                    btn.classList.remove('expanded');
-                    btn.querySelector('span').textContent = 'Ver Especificações Completas';
-                });
-                
-                // Se não estava expandido, expande
-                if (!isExpanded) {
-                    targetSpecs.classList.add('expanded');
-                    this.classList.add('expanded');
-                    this.querySelector('span').textContent = 'Ocultar Especificações';
-                }
-            });
-        });
-
-        // Animação ao rolar a página
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-
-        function checkScroll() {
-            const windowHeight = window.innerHeight;
-            const triggerPoint = windowHeight * 0.85;
-
-            animateElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                
-                if (elementTop < triggerPoint) {
-                    element.classList.add('animated');
-                }
-            });
-        }
-
-        // Verifica animações ao carregar a página
-        window.addEventListener('load', checkScroll);
-        
-        // Verifica animações ao rolar
-        window.addEventListener('scroll', checkScroll);
-
-        // Formulário de newsletter
-        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            
-            if (email) {
-                alert(`Obrigado por se inscrever na nossa newsletter! Em breve você receberá nossas melhores ofertas no email: ${email}`);
-                this.reset();
-            }
-        });
-
+<script>
+    (function() {
         // Header scroll effect
+        const header = document.getElementById('mainHeader');
         window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.padding = '8px 0';
-                header.style.backdropFilter = 'blur(20px)';
-                header.style.boxShadow = '0 6px 25px rgba(0, 0, 0, 0.08)';
-            } else {
-                header.style.padding = '12px 0';
-                header.style.backdropFilter = 'blur(15px)';
-                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
+            header.classList.toggle('scrolled', window.scrollY > 15);
+        });
+
+        // Menu hambúrguer
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 700) {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                if (window.innerWidth <= 700) {
+                    if (!navMenu.contains(event.target) && !hamburger.contains(event.target) && navMenu.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // WhatsApp integration for main form
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', function() {
+                const nome = document.getElementById('nome').value.trim();
+                const empresa = document.getElementById('empresa').value.trim();
+                const interesse = document.getElementById('interesse').value;
+
+                if (!nome) {
+                    alert('Por favor, preencha o nome completo.');
+                    document.getElementById('nome').focus();
+                    return;
+                }
+                if (!interesse) {
+                    alert('Selecione o tipo de serviço.');
+                    document.getElementById('interesse').focus();
+                    return;
+                }
+
+                let mensagem = `Olá! Gostaria de informações sobre `;
+                if (interesse === 'Comprar') mensagem += 'compra de gerador';
+                else if (interesse === 'Locar') mensagem += 'locação de gerador';
+                else mensagem += 'manutenção de gerador';
+
+                mensagem += `.%0A%0A*Nome:* ${nome}`;
+                if (empresa) mensagem += `%0A*Empresa:* ${empresa}`;
+
+                const telefone = '5521971486886';
+                window.open(`https://wa.me/${telefone}?text=${mensagem}`, '_blank');
+            });
+        }
+
+        document.getElementById('contatoForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            whatsappBtn.click();
+        });
+
+        // Modal functionality for service buttons
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalClose = document.getElementById('modalClose');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalSubtitle = document.getElementById('modalSubtitle');
+        const modalTipo = document.getElementById('modalTipo');
+        const modalNome = document.getElementById('modalNome');
+        const modalEmpresa = document.getElementById('modalEmpresa');
+        const modalQuantidade = document.getElementById('modalQuantidade');
+        const modalEnviar = document.getElementById('modalEnviar');
+        const serviceButtons = document.querySelectorAll('.service-btn');
+
+        // Open modal with specific service type
+        serviceButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const servico = this.dataset.servico;
+                
+                // Update modal content based on service type
+                if (servico === 'venda') {
+                    modalTitle.textContent = 'Comprar Gerador';
+                    modalSubtitle.textContent = 'Venda de Geradores';
+                } else if (servico === 'locacao') {
+                    modalTitle.textContent = 'Locar Gerador';
+                    modalSubtitle.textContent = 'Locação de Geradores';
+                } else if (servico === 'manutencao') {
+                    modalTitle.textContent = 'Manutenção';
+                    modalSubtitle.textContent = 'Manutenção de Geradores';
+                }
+                
+                modalTipo.value = servico;
+                modalNome.value = '';
+                modalEmpresa.value = '';
+                modalQuantidade.value = '1';
+                
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        modalClose.addEventListener('click', closeModal);
+
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) {
+                closeModal();
             }
         });
-    </script>
+
+        // Handle modal form submission
+        modalEnviar.addEventListener('click', function() {
+            const nome = modalNome.value.trim();
+            const empresa = modalEmpresa.value.trim();
+            const quantidade = modalQuantidade.value.trim();
+            const tipo = modalTipo.value;
+
+            if (!nome) {
+                alert('Por favor, preencha o nome completo.');
+                modalNome.focus();
+                return;
+            }
+
+            if (!quantidade || quantidade < 1) {
+                alert('Por favor, informe a quantidade de geradores.');
+                modalQuantidade.focus();
+                return;
+            }
+
+            let mensagem = '';
+            
+            if (tipo === 'venda') {
+                mensagem = `Olá! Gostaria de informações sobre *COMPRA DE GERADORES*.%0A%0A`;
+            } else if (tipo === 'locacao') {
+                mensagem = `Olá! Gostaria de informações sobre *LOCAÇÃO DE GERADORES*.%0A%0A`;
+            } else if (tipo === 'manutencao') {
+                mensagem = `Olá! Gostaria de informações sobre *MANUTENÇÃO DE GERADORES*.%0A%0A`;
+            }
+
+            mensagem += `*Nome:* ${nome}%0A`;
+            if (empresa) mensagem += `*Empresa:* ${empresa}%0A`;
+            mensagem += `*Quantidade:* ${quantidade} gerador(es)`;
+
+            const telefone = '5521971486886';
+            window.open(`https://wa.me/${telefone}?text=${mensagem}`, '_blank');
+            
+            closeModal();
+        });
+
+        // Carrossel de Imagens Automático
+        const slides = document.querySelectorAll('.carousel-slide');
+        const slidesContainer = document.getElementById('carouselSlides');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+        const indicatorsContainer = document.getElementById('carouselIndicators');
+        
+        if (slides.length > 0 && slidesContainer && prevBtn && nextBtn) {
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            let autoPlayInterval;
+
+            // Criar indicadores
+            for (let i = 0; i < totalSlides; i++) {
+                const indicator = document.createElement('span');
+                indicator.classList.add('indicator');
+                indicator.dataset.index = i;
+                indicator.addEventListener('click', () => goToSlide(i));
+                indicatorsContainer.appendChild(indicator);
+            }
+
+            const indicators = document.querySelectorAll('.indicator');
+
+            function updateSlides() {
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            function goToSlide(index) {
+                currentSlide = index;
+                updateSlides();
+                resetAutoPlay();
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlides();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlides();
+            }
+
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(nextSlide, 4000); // Muda a cada 4 segundos
+            }
+
+            function resetAutoPlay() {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+
+            // Event listeners
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetAutoPlay();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoPlay();
+            });
+
+            // Pausar autoplay quando o mouse estiver sobre o carrossel
+            slidesContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoPlayInterval);
+            });
+
+            slidesContainer.addEventListener('mouseleave', () => {
+                startAutoPlay();
+            });
+
+            // Iniciar autoplay
+            startAutoPlay();
+            updateSlides();
+        }
+
+        // Carrossel de Depoimentos
+        const testimonialTrack = document.getElementById('testimonialsTrack');
+        const prevTestimonial = document.getElementById('prevTestimonial');
+        const nextTestimonial = document.getElementById('nextTestimonial');
+        const testimonialDots = document.querySelectorAll('.testimonials-dot');
+        
+        if (testimonialTrack && prevTestimonial && nextTestimonial && testimonialDots.length > 0) {
+            let currentIndex = 0;
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            let cardsPerView = window.innerWidth > 1024 ? 3 : window.innerWidth > 768 ? 2 : 1;
+            const totalCards = testimonialCards.length;
+            const maxIndex = Math.ceil(totalCards / cardsPerView) - 1;
+
+            function updateTestimonialsCarousel() {
+                const cardWidth = testimonialCards[0].offsetWidth + 32;
+                testimonialTrack.style.transform = `translateX(-${currentIndex * cardsPerView * cardWidth}px)`;
+                
+                testimonialDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+
+                prevTestimonial.disabled = currentIndex === 0;
+                nextTestimonial.disabled = currentIndex >= maxIndex;
+            }
+
+            function handleTestimonialsResize() {
+                cardsPerView = window.innerWidth > 1024 ? 3 : window.innerWidth > 768 ? 2 : 1;
+                currentIndex = Math.min(currentIndex, maxIndex);
+                updateTestimonialsCarousel();
+            }
+
+            prevTestimonial.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateTestimonialsCarousel();
+                }
+            });
+
+            nextTestimonial.addEventListener('click', () => {
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                    updateTestimonialsCarousel();
+                }
+            });
+
+            testimonialDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateTestimonialsCarousel();
+                });
+            });
+
+            window.addEventListener('resize', handleTestimonialsResize);
+            updateTestimonialsCarousel();
+        }
+    })();
+</script>
+
+<!-- Google Analytics (opcional) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 </body>
 </html>
