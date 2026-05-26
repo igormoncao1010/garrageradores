@@ -212,7 +212,7 @@ textarea {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.76) 44%, rgba(0, 0, 0, 0.34) 72%, rgba(0, 0, 0, 0.12) 100%),
-    url("assets/garra/01.png"),
+    url("01.png"),
     linear-gradient(135deg, #f3efe7, #ffffff);
   background-position: center, right center, center;
   background-size: cover, cover, auto;
@@ -830,7 +830,7 @@ p {
     padding: 118px calc((100vw - var(--content-width)) / 2) 58px;
     background:
       linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.62) 54%, rgba(0, 0, 0, 0.18) 100%),
-      url("assets/garra/02.png"),
+      url("02.png"),
       linear-gradient(135deg, #f3efe7, #ffffff);
     background-position: center, center top, center;
     background-size: cover, cover, auto;
